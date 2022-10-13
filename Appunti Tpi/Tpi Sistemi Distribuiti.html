@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tpi Sistemi Distribuiti</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="argomenti-sistemi-distribuiti">Argomenti sistemi distribuiti</h1>
+<h2 id="definizione-sistema-distribuito">Definizione sistema distribuito</h2>
+<p>Si tratta di un sistema informatico costituito da un insieme di processi informatici interconnessi fra di loro, le cui comunicazioni avvengono tramite uno scambio di messaggi(dati)</p>
+<h2 id="struttura-di-un-nodo-di-un-sistema-distribuito">Struttura di un nodo di un sistema distribuito</h2>
+<p>Un nodo è un processo in esecuzione su un Host, con la possibilità di scambiare messaggi con gli altri nodi del sistema.</p>
+<h2 id="modalità-di-connessione-tra-i-nodi-di-un-sistema-distribuito">Modalità di connessione tra i nodi di un sistema distribuito</h2>
+<p>La connessione fra nodi di un sistema distribuito avviene tramite un broker, un nodo speciale che mette in comunicazione 2 nodi.</p>
+<h2 id="tipologie-di-sistemi-distribuiti">Tipologie di sistemi distribuiti</h2>
+<p>Principalmente di 2 tipi:</p>
+<ul>
+<li>di Calcolo: sono tutti quei sistemi che effettuano delle elaborazioni distribuendo algoritmi sui nodi del sistema distribuito in modo tale che i nodi possano collaborare per la sua esecuzione.</li>
+<li>di Dati: chiamati anche sistemi distribuiti informatici, consentono di operare su grandi quantità di dati e di gestire in modo ottimale grandi quantità di utenti.</li>
+</ul>
+<h2 id="definizione-e-ruolo-del-middleware">Definizione e ruolo del middleware</h2>
+<p>Il middleware è un nodo del sistema distribuito che ha funzionalità particolari. Il suo ruolo é quello di essere un elemento che consente la comunicazione tra due nodi diversi del sistema oppure tra il sistema ed applicazioni esterne.</p>
+<h2 id="service-discovery-message-broker-e-api-gateway">Service Discovery, Message Broker e API gateway</h2>
+<p>Il <strong>Service Discovery</strong> è un processo che rileva quali servizi un nodo offre e lo comunica a tutti gli altri nodi.<br>
+Il <strong>Message Broker</strong> è un oggetto in un sistema distribuito che mette in comunicazione 2 nodi.<br>
+L’<strong>API gateway</strong> è il componente attraverso cui dall’esterno si può comunicare col sistema. Questo componente smista il traffico in entrata tra i nodi interni che si preoccuperanno di rispondere alle richieste provenienti dai client.</p>
+<h2 id="connessione-client-server">Connessione Client-Server</h2>
+<p>La richiesta di connessione di un client con un server avviene tramite il protocollo TCP, in cui il client manda una Request al server in formato HTTP per creare la connessione, ed attende dal server una Response.<br>
+La modalità di connessione Client-Server può essere di 2 tipi:</p>
+<ul>
+<li><strong>Unicast</strong>: il server comunica con un solo client per volta, accettando una sola richiesta di connessione per volta;</li>
+<li><strong>Multicast</strong>: al server possono essere connessi e comunicare più client contemporaneamente.</li>
+</ul>
+<h2 id="http">HTTP</h2>
+<p>è un protocollo a livello applicativo usato come principale sistema per la trasmissione d’informazioni sul web in un’architettura Client-Server.</p>
+<h2 id="heartbeat-server">Heartbeat Server</h2>
+<p>é un protocollo che consente ad un processo di capire se un altro processo é attivo oltre a recuperare eventualmente altre informazioni relative al carico corrente del processo remoto.<br>
+I client ad un certo intervallo di secondi devono inviare un pacchetto al server; se non vengono mandati più pacchetti per un certo numero di intervalli consecutivi, l’HeartBeat avvisa il Service Discovery, che cancella i dati dell’indirizzo e dei servizi che il nodo(client) offriva.<br>
+Nel caso il client tornasse attivo, i suoi dati dell’indirizzo e dei servizi vengono nuovamente registrati nel Service Discovery, e l’HeartBeat server torna a tenere traccia del client.</p>
+<h2 id="protocollo-di-comunicazione-pubsub">Protocollo di comunicazione Pub/Sub</h2>
+<p>è una modalità di scambio di messaggi che consente a dei mittenti, chiamati Sender, di inviare dei messaggi carattegorizzati in un topic in un sistema senza sapere chi sarà il destinatario di questi messaggi. Sarà infatti un componente specifico del sistema, chiamato broker, ad occuparsi di recapitare una copia del messaggio pubblicato a tutti quei processi locali o remoti che hanno espresso interesse verso quel tipo di messaggio effettuando una Subscribe per il topic del messaggio inviato.<br>
+In questo protocollo vi sono 3 tipi di comandi:</p>
+<ul>
+<li>Subscribe(Topic)</li>
+<li>Unsubscribe(Topic)</li>
+<li>Publish(Topic, Payload): il payload è semplicemente messaggio che viene inviato e può essere di vario tipo (Binario, Testuale, etc…)</li>
+</ul>
+<h2 id="mqtt">MQTT</h2>
+<p>è un protocollo di messaggistica standard OASIS per l’Internet of Things (IoT). È progettato come un trasporto di messaggistica di pubblicazione/sottoscrizione estremamente leggero, ideale per la connessione di dispositivi remoti con un footprint di codice ridotto e una larghezza di banda di rete minima. MQTT oggi è utilizzato in un’ampia varietà di settori, come automobilistico, manifatturiero, telecomunicazioni, petrolio e gas, ecc.</p>
+<h2 id="evoluzione-storica-dai-mainframe-fino-ai-sistemi-distribuiti">Evoluzione storica dai mainframe fino ai sistemi distribuiti</h2>
+<p>Fino agli anni 60’ i sistemi informatici erano per lo più centralizzati. Dato il costo elevato di allora dei calcolatori, risultava vantaggioso concentrare tutta la potenza dei calcolatori in un unico grande calcolatore, piuttosto che in piccoli calcolatori con potenze di calcolo bassissime.<br>
+In questi ambienti il computer centrale, detto mainframe, consentiva il collegamento tramite la rete da un apparecchio denominato terminale che non aveva alcuna potenza di calcolo, ma il solo scopo di inviare e ricevere i codici.<br>
+Nella metà degli anni 60’ vi fu la comparsa dei primi minicomputer, una sorta di sistema intermedio fra mainframe e terminali che si diffusero molto, soprattutto nelle università, alla fine degli anni 60’, consentendo la programmazione dei primi sistemi operativi scritti in linguaggi di alto livello (nacque il linguaggio C) o delle prime infrastrutture di rete.<br>
+La nascita delle prime reti iniziarono a rendere l’informatica uno strumento distribuito, iniziando a creare i primi servizi a cui delle macchine poco potenti potevano connettersi in modo autonomo, rompendo il vincolo della vicinanza fisica ai terminali per poter usufruire di un servizio e portando alla creazione dei sistemi distribuiti.</p>
+</div>
+</body>
+
+</html>
