@@ -27,7 +27,7 @@ La modalità di connessione Client-Server può essere di 2 tipi:
 ## HTTP
 è un protocollo a livello applicativo usato come principale sistema per la trasmissione d'informazioni sul web in un'architettura Client-Server.
 ## Heartbeat Server
-é un protocollo che consente ad un processo di capire se un altro processo é attivo oltre a recuperare eventualmente altre informazioni relative al carico corrente del processo remoto.
+é un server che consente ad un processo di capire se un altro processo é attivo oltre a recuperare eventualmente altre informazioni relative al carico corrente del processo remoto.
 I client ad un certo intervallo di secondi devono inviare un pacchetto al server; se non vengono mandati più pacchetti per un certo numero di intervalli consecutivi, l'HeartBeat avvisa il Service Discovery, che cancella i dati dell'indirizzo e dei servizi che il nodo(client) offriva. 
 Nel caso il client tornasse attivo, i suoi dati dell'indirizzo e dei servizi vengono nuovamente registrati nel Service Discovery, e l'HeartBeat server torna a tenere traccia del client.
 ## Protocollo di comunicazione Pub/Sub 
