@@ -50,6 +50,7 @@ Vantaggi:
 - scalabilità (se ti servono più prestazioni aggiungi o togli nodi) 
 - può essere su più macchine diverse (se cade una parte non cade tutto il sistema) 
 - svolge operazioni in parallelo.
+
 Svantaggi:
 - Ideazione, gestione, programmazione complessa, comunicaazione tra nodi complessa.
 
