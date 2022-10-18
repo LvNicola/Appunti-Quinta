@@ -43,7 +43,14 @@ Fino agli anni 60' i sistemi informatici erano per lo più centralizzati. Dato i
 In questi ambienti il computer centrale, detto mainframe, consentiva il collegamento tramite la rete da un apparecchio denominato terminale che non aveva alcuna potenza di calcolo, ma il solo scopo di inviare e ricevere i codici. 
 Nella metà degli anni 60' vi fu la comparsa dei primi minicomputer, una sorta di sistema intermedio fra mainframe e terminali che si diffusero molto, soprattutto nelle università, alla fine degli anni 60', consentendo la programmazione dei primi sistemi operativi scritti in linguaggi di alto livello (nacque il linguaggio C) o delle prime infrastrutture di rete.
 La nascita delle prime reti iniziarono a rendere l'informatica uno strumento distribuito, iniziando a creare i primi servizi a cui delle macchine poco potenti potevano connettersi in modo autonomo, rompendo il vincolo della vicinanza fisica ai terminali per poter usufruire di un servizio e portando alla creazione dei sistemi distribuiti.
-
-
+## Vantaggi e Svantaggi di un sistema distribuito
+Vantaggi:
+- Scomposizione e divisione dei problemi 
+- possibilità di dividere la programmazione tra più persone
+- scalabilità (se ti servono più prestazioni aggiungi o togli nodi) 
+- può essere su più macchine diverse (se cade una parte non cade tutto il sistema) 
+- svolge operazioni in parallelo.
+Svantaggi:
+- Ideazione, gestione, programmazione complessa, comunicaazione tra nodi complessa.
 
  
