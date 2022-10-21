@@ -1,4 +1,4 @@
-﻿## Sistemi nat statico
+﻿## NAT Statico
 Router>enable
 
 Router #conf t
@@ -23,11 +23,11 @@ Router(config) #ip nat inside source static 10.1.1.3 170.168.2.4
 
 Router(config) #ip nat inside source static 10.1.1.200 170.168.2.5
 
-## Sistemi nat dinamico
+## NAT Dinamico
 
-- creiamo il pool di ip pubblici
-- creiamo aci per gestire gli host della rete interna 
-- associo aci pool
+- Creiamo il pool di IP pubblici
+- Creiamo ACI per gestire gli host della rete interna
+- Associo ACI pool
 
 Router>enable
 
@@ -51,7 +51,7 @@ Router(config) #access-list 1 permit 10.1.1.0 0.0.0.255
 
 Router(config) #ip nat inside source list 1 pool pubblico
 
-## Sistemi PAT nat 
+## PAT NAT
 
 Router>enable
 
@@ -75,5 +75,5 @@ Router(config) #ip nat pool pubblico 170.168.2.2 170.168.2.254 netmask 255.255.2
 
 Router(config) #ip nat inside source list 1 pool pubblico overload
 
-> se hai un solo ip pubblico, aggiungi quest'ultimo comando:
+> Se hai un solo IP pubblico, esegui quest'ultimo comando:
 Router(config) #ip nat pool pubblico 170.168.2.2 170.168.2.2 netmask 255.255.255.0
