@@ -20,6 +20,6 @@ Questa repository è gestita da @LvNicola e @garoffoli.
 -[Appunti](https://github.com/LvNicola/Appunti-Quinta/tree/main/GPO/APPUNTI)
 
 ### TPI
--[Appunti](https://www.example.com)
+-[Appunti](https://github.com/LvNicola/Appunti-Quinta/tree/main/TPI/APPUNTI)
 
--[Esercizi](https://github.com/LvNicola/Appunti-Quinta/tree/main/TPI/APPUNTI)
+-[Esercizi](https://github.com/LvNicola/Appunti-Quinta/tree/main/TPI/ESERCIZI)
