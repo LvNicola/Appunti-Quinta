@@ -9,7 +9,7 @@ Questa repository è gestita da @LvNicola e @garoffoli.
 -[Esercizi](https://github.com/LvNicola/Appunti-Quinta/tree/main/INFO/ESERCIZI)
 
 ### Sistemi e Reti
--[Tutorial](https://www.example.com)
+-[Tutorial](https://github.com/LvNicola/Appunti-Quinta/tree/main/SISTEMIRETI/TUTORIAL)
 
 -[Appunti](https://github.com/LvNicola/Appunti-Quinta/tree/main/SISTEMIRETI/APPUNTI)
 
